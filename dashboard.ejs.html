@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Welcome, <%= user %></h2>
+    <a href="/logout">Logout</a>
+    <h3>Patient Records</h3>
+    <table border="1">
+      <tr>
+        <th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Disease</th>
+      </tr>
+      <% patients.forEach(p => { %>
+        <tr>
+          <td><%= p.id %></td>
+          <td><%= p.name %></td>
+          <td><%= p.age %></td>
+          <td><%= p.gender %></td>
+          <td><%= p.disease %></td>
+        </tr>
+      <% }) %>
+    </table>
+  </div>
+</body>
+</html>
